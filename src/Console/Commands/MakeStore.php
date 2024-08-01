@@ -24,9 +24,9 @@ class MakeStore extends GeneratorCommand
 
     protected function getDefaultNamespace($rootNamespace): string
     {
-        $namespace = trim($this->option('namespace') ?? 'Stores', '\\');
+        $storeNamespace = $this->option('namespace') ?? 'Stores';
 
-        return trim($rootNamespace . '\\' . $namespace, '\\');
+        return $rootNamespace . '\\' . $storeNamespace;
     }
 
     protected function getStubPath(string $fileName): string
