@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\App;
 
 class QueryStoreFactory
 {
-    public static function make()
+    public static function make(): LatestPosts
     {
         return App::make(LatestPosts::class);
     }
