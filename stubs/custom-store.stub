@@ -1,0 +1,13 @@
+<?php
+
+namespace {{namespace}};
+
+use Mayank\Store\CustomStore;
+
+class {{class}} extends CustomStore
+{
+    public function data()
+    {
+
+    }
+}

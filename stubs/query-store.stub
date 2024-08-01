@@ -1,0 +1,15 @@
+<?php
+
+namespace {{namespace}};
+
+use Illuminate\Database\Eloquent\Builder;
+
+use Mayank\Store\QueryStore;
+
+class {{class}} extends QueryStore
+{
+    public function query(): Builder
+    {
+
+    }
+}
