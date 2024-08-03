@@ -174,6 +174,19 @@ Schedule::command('store:cache TopRatedMovies')->daily();
 
 ## Advanced Usage
 
+### Invalidate cache when data is changed
+You might want to invalidate the cache or rebuild it when the underlying data is changed. Combine this package with [Laravel Observers](https://laravel.com/docs/eloquent#observers) to achieve the same.
+
+```php
+class MovieObserver
+{
+    public function updated(Movie $movie): void
+    {
+        (new TopRatedMovies)->clearCache();
+    }
+}
+```
+
 ### Different variations of the same data
 In some cases, you might want to show different variations of the same data. For example, in your API you would like to show a very small subset of data. As Laravel Store is just a class, you can add your own methods to it.
 
